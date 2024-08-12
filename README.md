@@ -85,3 +85,64 @@ WanderLust is a simple MERN travel blog website ✈ This is an open source proje
    ```
 
    Refresh your page and then you should be able to access the completed application.
+
+----------
+
+
+**Setting up the project locally**
+
+*Setting up the Backend*
+
+1. Fork and Clone the Repository
+
+   ``git clone https://github.com/{your-username}/wanderlust.git``
+
+2. Navigate to the Backend Directory
+
+   ``cd backend``
+
+3. Install Required Dependencies
+
+   ``npm i``
+
+4. Set up your MongoDB Database
+
+   `` Open MongoDB Compass and connect MongoDB locally at mongodb://localhost:27017.``
+
+5. Import sample data
+
+    To populate the database with sample posts, you can copy the content from the backend/data/sample_posts.json file and insert it as a document in the wanderlust/posts collection in your local MongoDB database using either MongoDB Compass or mongoimport.
+
+   ``mongoimport --db wanderlust --collection posts --file ./data/sample_posts.json --jsonArray``
+
+6. Configure Environment Variables
+
+   ``cp .env.sample .env``
+
+7. Start the Backend Server
+
+   ``npm start``
+
+You should see the following on your terminal output on successful setup.
+
+[BACKEND] Server is running on port 5000
+[BACKEND] Database connected: mongodb://127.0.0.1/wanderlust
+
+*Setting up the Frontend*
+
+1. Open a New Terminal
+
+   ``cd frontend``
+
+2. Install Dependencies
+
+   ``npm i``
+
+3. Configure Environment Variables
+
+   ``cp .env.sample .env.local``
+
+4. Launch the Development Server
+
+   ``npm run dev``
+
